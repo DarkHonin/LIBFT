@@ -17,6 +17,5 @@ void    ft_buffdel(t_buff *buff)
 {
     free(buff->data);
     free(buff->pointer);
-    free(buff->meta);
     free(buff);
 }

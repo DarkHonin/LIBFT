@@ -12,14 +12,14 @@
 
 #include "libft.h"
 
-t_buff  *ft_buffnew(size_t buffsize, void *meta)
+t_buff  *ft_buffnew(size_t buffsize, int me)
 {
     t_buff *ret;
     
     ret = (t_buff *)ft_memalloc(sizeof(t_buff));
     ret->data = ft_memalloc(buffsize);
     ret->buff_size = buffsize;
-    ret->meta = meta;
+    ret->meta = me;
     ret->pointer = ret->data + buffsize;
     return (ret);
 }
