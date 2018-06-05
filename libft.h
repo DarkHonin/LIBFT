@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/05/27 09:54:06 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/05 13:45:11 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,14 @@ typedef struct			s_list
 	size_t				content_size;
 	struct s_list		*next;
 }						t_list;
+
+typedef struct			s_buff
+{
+	size_t				buff_size;
+	void				*data;
+	void				*pointer;
+	void				*meta;
+}						t_buff;
 
 t_list					*ft_lstnew(const void *cont, size_t csize);
 int						ft_atoi(char const *str);
@@ -108,5 +116,9 @@ void					ft_lstdel(t_list **lst, void (*del)(void *, size_t));
 void					ft_lstadd(t_list **lst, t_list *ne);
 void					ft_lstiter(t_list *e, void (*f)(t_list *elm));
 t_list					*ft_lstmap(t_list *e, t_list *(*f)(t_list *a));
-
+t_buff					*ft_buffnew(size_t buffsize, void *meta);
+void    				ft_buffdel(t_buff *buff);
+int     				ft_buffget(size_t get_size, t_buff *buff, void *data);
+size_t					ft_buffstat(t_buff *e);
+void    				ft_buffreset(t_buff *e);
 #endif
