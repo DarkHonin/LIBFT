@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/05 13:45:11 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/06 15:40:15 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,7 @@ int						ft_isprint(int e);
 char					*ft_strndup(const char *src, size_t max);
 int						ft_maxi(int a, int b);
 int						ft_mini(int a, int b);
+size_t					ft_minl(size_t a, size_t b);
 void					ft_putnbr(int a);
 int						ft_count_w(const char *w, char delim);
 void					ft_putstr_fd(char *strl, int fd);
@@ -122,4 +123,5 @@ int     				ft_buffget(size_t get_size, t_buff *buff, void *data);
 size_t					ft_buffstat(t_buff *e);
 void    				ft_buffreset(t_buff *e);
 t_buff 					*ft_buffap(t_buff *dest, t_buff *ap);
+t_buff 					*ft_buffnap(t_buff *dest, t_buff *ap, size_t lim);
 #endif
