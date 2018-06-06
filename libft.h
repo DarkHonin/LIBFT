@@ -121,4 +121,5 @@ void    				ft_buffdel(t_buff *buff);
 int     				ft_buffget(size_t get_size, t_buff *buff, void *data);
 size_t					ft_buffstat(t_buff *e);
 void    				ft_buffreset(t_buff *e);
+t_buff 					*ft_buffap(t_buff *dest, t_buff *ap);
 #endif

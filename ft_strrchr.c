@@ -22,7 +22,7 @@ char	*ft_strrchr(char const *hay, int needle)
 	len = ft_strlen(hay);
 	last = (char *)NULL;
 	offset = 0;
-	while (hay[offset] != '\0')
+	while (hay[offset] != '\0' && offset < len)
 	{
 		if (hay[offset] == needle)
 			last = (char *)hay + offset;
