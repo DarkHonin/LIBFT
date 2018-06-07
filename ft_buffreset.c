@@ -6,13 +6,13 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 13:43:34 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/05 13:44:13 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/07 13:20:48 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_buffreset(t_buff *e)
+void	ft_buffreset(t_buff *e)
 {
-    e->pointer = e->data;
+	e->pointer = e->data;
 }

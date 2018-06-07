@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 13:35:10 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/05 13:55:11 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/07 13:20:58 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 **  in the buffer
 */
 
-size_t  ft_buffstat(t_buff *e)
+size_t	ft_buffstat(t_buff *e)
 {
-    return (e->buff_size - (e->pointer - e->data));
+	return (e->buff_size - (e->pointer - e->data));
 }
