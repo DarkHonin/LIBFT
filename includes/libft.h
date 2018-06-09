@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/07 13:21:59 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/08 14:04:06 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,11 +117,12 @@ void					ft_lstdel(t_list **lst, void (*del)(void *, size_t));
 void					ft_lstadd(t_list **lst, t_list *ne);
 void					ft_lstiter(t_list *e, void (*f)(t_list *elm));
 t_list					*ft_lstmap(t_list *e, t_list *(*f)(t_list *a));
-t_buff					*ft_buffnew(size_t buffsize, int meta, t_buff **ret);
+t_buff					*ft_buffnew(size_t buffsize, int meta);
 void    				ft_buffdel(t_buff *buff);
 int     				ft_buffget(size_t get_size, t_buff *buff, void *data);
 size_t					ft_buffstat(t_buff *e);
 void    				ft_buffreset(t_buff *e);
 t_buff 					*ft_buffap(t_buff *dest, t_buff *ap);
 t_buff 					*ft_buffnap(t_buff *dest, t_buff *ap, size_t lim);
+void					*ft_buffshift(t_buff *buff);
 #endif

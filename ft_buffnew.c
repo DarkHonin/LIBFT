@@ -6,18 +6,19 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 13:08:17 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/07 13:20:30 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/08 14:04:36 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_buff	*ft_buffnew(size_t buffsize, int me, t_buff **ret)
+t_buff	*ft_buffnew(size_t buffsize, int me)
 {
-	(*ret) = (t_buff *)ft_memalloc(sizeof(t_buff));
-	(*ret)->data = ft_memalloc(buffsize);
-	(*ret)->buff_size = buffsize;
-	(*ret)->meta = me;
-	(*ret)->pointer = (*ret)->data + buffsize;
-	return (*ret);
+	t_buff *ret;
+	(ret) = (t_buff *)ft_memalloc(sizeof(t_buff));
+	(ret)->data = ft_memalloc(buffsize);
+	(ret)->buff_size = buffsize;
+	(ret)->meta = me;
+	(ret)->pointer = (ret)->data + buffsize;
+	return (ret);
 }
