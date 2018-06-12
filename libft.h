@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/08 14:04:06 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/11 12:56:27 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -125,4 +125,6 @@ void    				ft_buffreset(t_buff *e);
 t_buff 					*ft_buffap(t_buff *dest, t_buff *ap);
 t_buff 					*ft_buffnap(t_buff *dest, t_buff *ap, size_t lim);
 void					*ft_buffshift(t_buff *buff);
+void					ft_buffpush(t_buff *buff, void *data, size_t size);
+int						ft_buffgetn(size_t get_size, t_buff *buff, void *data, size_t offset);
 #endif

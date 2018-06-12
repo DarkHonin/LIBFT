@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 00:29:07 by wgourley          #+#    #+#             */
-/*   Updated: 2018/05/26 13:03:30 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/12 10:39:45 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strnstr(char const *big, char const *little, size_t max)
 
 	if (!ft_strlen(big))
 		return ((char *)NULL);
-	if (!strlen(little))
+	if (!ft_strlen(little))
 		return ((char *)(big));
 	index = 0;
 	internal = 0;

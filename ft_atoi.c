@@ -6,13 +6,12 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/19 00:47:15 by wgourley          #+#    #+#             */
-/*   Updated: 2018/05/26 14:10:25 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/12 10:36:53 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <string.h>
-#include <stdio.h>
 
 static int	resolve_sign(int total, int sign)
 {

@@ -6,12 +6,13 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/06 15:16:41 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/07 15:35:07 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/12 10:12:39 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
+
 /*
 **  buff ap is responsible for appending the contents of
 **  one buffer starting from the pointer onto the other returning
