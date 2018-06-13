@@ -6,11 +6,11 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 17:03:45 by wgourley          #+#    #+#             */
-/*   Updated: 2018/05/23 17:07:14 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/13 10:20:56 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr_f(const void *hay, int (*f)(int), size_t len)
 {

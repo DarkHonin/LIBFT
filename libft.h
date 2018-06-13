@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/11 12:56:27 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/13 10:37:13 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ char					*ft_strjoin(const char *a, const char *b);
 void					*ft_memalloc(size_t size);
 void					*ft_memccpy(void *dest,
 							const void *src, int limchar, size_t maxchar);
-void					*ft_memchr(const void *hay, int needle, int len);
-void					*ft_memchr_n(const void *hay, int needle, int len);
+void					*ft_memchr(const void *hay, int needle, size_t len);
+void					*ft_memchr_n(const void *hay, int needle, size_t len);
 void					*ft_memchr_f(const void *hay,
 							int (*f)(int), size_t len);
 void					*ft_memchr_nf(const void *hay,
@@ -118,13 +118,14 @@ void					ft_lstadd(t_list **lst, t_list *ne);
 void					ft_lstiter(t_list *e, void (*f)(t_list *elm));
 t_list					*ft_lstmap(t_list *e, t_list *(*f)(t_list *a));
 t_buff					*ft_buffnew(size_t buffsize, int meta);
-void    				ft_buffdel(t_buff *buff);
-int     				ft_buffget(size_t get_size, t_buff *buff, void *data);
+void					ft_buffdel(t_buff *buff);
+int						ft_buffget(size_t get_size, t_buff *buff, void *data);
 size_t					ft_buffstat(t_buff *e);
-void    				ft_buffreset(t_buff *e);
-t_buff 					*ft_buffap(t_buff *dest, t_buff *ap);
-t_buff 					*ft_buffnap(t_buff *dest, t_buff *ap, size_t lim);
+void					ft_buffreset(t_buff *e);
+t_buff					*ft_buffap(t_buff *dest, t_buff *ap);
+t_buff					*ft_buffnap(t_buff *dest, t_buff *ap, size_t lim);
 void					*ft_buffshift(t_buff *buff);
 void					ft_buffpush(t_buff *buff, void *data, size_t size);
-int						ft_buffgetn(size_t get_size, t_buff *buff, void *data, size_t offset);
+int						ft_buffgetn(size_t get_size, t_buff *buff, void *data,
+							size_t offset);
 #endif

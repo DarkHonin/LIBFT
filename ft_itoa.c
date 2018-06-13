@@ -6,13 +6,12 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 09:10:38 by wgourley          #+#    #+#             */
-/*   Updated: 2018/05/26 13:25:07 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/13 10:20:03 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "libft.h"
-#include <string.h>
 
 static	int	ft_numlen(int num, int base)
 {

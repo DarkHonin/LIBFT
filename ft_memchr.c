@@ -6,11 +6,11 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/11 20:47:44 by wgourley          #+#    #+#             */
-/*   Updated: 2018/05/20 13:36:15 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/13 10:21:32 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *hay, int needle, size_t len)
 {

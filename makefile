@@ -24,16 +24,12 @@ NAME=libft.a
 
 all: $(NAME)
 
-$(DEP):
-	mkdir -p $(INCDIR)
-	cp libft.h $(DEP)
-
 $(NAME): $(OBJ_DIR)
 	@ar rc $(NAME) $(OBJ_DIR)
 	@ranlib $(NAME)
 	@echo "LIB MADE"
 
-$(OBJ_DIR): $(DEP)
+$(OBJ_DIR):
 	@echo "Making .o: $*"
 	@$(GC) -c $*.c -o $@ $(FLAGS)
 
@@ -44,4 +40,3 @@ clean:
 
 fclean: clean
 	@rm -rf $(NAME)
-	@rm -rf includes
