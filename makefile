@@ -1,7 +1,5 @@
 GC=gcc
 FLAGS=-Wextra -Wall -Werror
-DEP=includes/libft.h
-INCDIR=includes
 OBJ_DIR:=ft_atoi.o ft_bzero.o ft_strtrim.o ft_strjoin.o ft_ischr.o \
 	ft_intpow.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o \
 	ft_isprint.o ft_strdel.o ft_strequ.o ft_strnequ.o ft_strsub.o\
