@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 13:35:10 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/08 13:35:30 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/19 14:37:06 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,5 @@
 
 int	ft_buffstat(t_buff *e)
 {
-	return ((e->data + e->available) - e->pointer);;
+	return ((e->data - e->pointer) + e->available);
 }
