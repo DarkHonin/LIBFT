@@ -6,13 +6,12 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/10 13:55:40 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/12 10:14:08 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/13 10:16:30 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdio.h>
 
 void	ft_buffpush(t_buff *buff, void *data, size_t size)
 {
