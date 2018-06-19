@@ -16,6 +16,6 @@
 int	ft_strnequ(const char *a, const char *b, size_t max)
 {
 	if (!a || !b)
-		return ((int)NULL);
+		return (0);
 	return (ft_strncmp(a, b, max) == 0);
 }

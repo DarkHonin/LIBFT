@@ -1,7 +1,6 @@
 GC=gcc
 FLAGS=-Wextra -Wall -Werror
 DEP=includes/libft.h
-INCDIR=includes
 OBJ_DIR:=ft_atoi.o ft_bzero.o ft_strtrim.o ft_strjoin.o ft_ischr.o \
 	ft_intpow.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o \
 	ft_isprint.o ft_strdel.o ft_strequ.o ft_strnequ.o ft_strsub.o\
@@ -18,22 +17,19 @@ OBJ_DIR:=ft_atoi.o ft_bzero.o ft_strtrim.o ft_strjoin.o ft_ischr.o \
 	ft_lstnew.o ft_strtrim_de.o ft_strtrim_delim.o ft_lstdelone.o \
    	ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o ft_memccmp.o \
 	ft_buffnew.o ft_buffdel.o ft_buffget.o ft_buffstat.o ft_buffreset.o \
-	ft_buffap.o ft_buffnap.o ft_minl.o ft_buffshift.o ft_buffpush.o ft_buffgetn.o
+	ft_buffap.o ft_buffnap.o ft_minl.o ft_buffshift.o ft_buffpush.o ft_buffgetn.o \
+	ft_bufffill.o
 
 NAME=libft.a
 
 all: $(NAME)
-
-$(DEP):
-	mkdir -p $(INCDIR)
-	cp libft.h $(DEP)
 
 $(NAME): $(OBJ_DIR)
 	@ar rc $(NAME) $(OBJ_DIR)
 	@ranlib $(NAME)
 	@echo "LIB MADE"
 
-$(OBJ_DIR): $(DEP)
+$(OBJ_DIR):
 	@echo "Making .o: $*"
 	@$(GC) -c $*.c -o $@ $(FLAGS)
 

@@ -17,7 +17,7 @@
 **  in the buffer
 */
 
-size_t	ft_buffstat(t_buff *e)
+int	ft_buffstat(t_buff *e)
 {
-	return (e->buff_size - (e->pointer - e->data));
+	return ((e->data + e->available) - e->pointer);;
 }

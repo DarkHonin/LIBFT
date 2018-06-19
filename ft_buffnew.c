@@ -21,5 +21,6 @@ t_buff	*ft_buffnew(size_t buffsize, int me)
 	(ret)->buff_size = buffsize;
 	(ret)->meta = me;
 	(ret)->pointer = (ret)->data + buffsize;
+	(ret)->available = 0;
 	return (ret);
 }
