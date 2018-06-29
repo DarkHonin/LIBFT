@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/22 15:03:52 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/28 08:18:50 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,4 +129,5 @@ void					*ft_buffshift(t_buff *buff);
 void					ft_buffpush(t_buff *buff, void *data, size_t size);
 int						ft_buffgetn(size_t get_size, t_buff *buff, void *data, size_t offset);
 int						ft_bufffill(t_buff *buff, int (*reader)(int, void *, size_t));
+void					*ft_realloc(void *src, size_t srclen, size_t nl);
 #endif

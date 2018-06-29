@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/05 13:16:02 by wgourley          #+#    #+#             */
-/*   Updated: 2018/06/07 13:19:21 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/06/26 11:08:26 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,16 +26,14 @@
 
 int	ft_buffget(size_t get_size, t_buff *buff, void *data)
 {
-	size_t delta;
 	size_t remaining;
 
-	delta = buff->pointer - buff->data;
-	remaining = buff->buff_size - delta;
+	remaining = ft_buffstat(buff);
 	if (remaining == 0)
 		return (0);
 	if (remaining < get_size)
 		return (-1);
-	data = ft_memcpy(data, buff->pointer, get_size);
+	ft_memcpy(data, buff->pointer, get_size);
 	buff->pointer += get_size;
 	return (1);
 }
