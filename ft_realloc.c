@@ -17,6 +17,7 @@ void	*ft_realloc(void *src, size_t srclen, size_t nl)
 	void *ret;
 
 	ret = ft_memalloc(nl);
-	ft_memcpy(ret, src, srclen);
+	ft_memcpy(ret, src, ft_mini(srclen, nl));
+	free(src);
 	return (ret);
 }

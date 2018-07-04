@@ -18,7 +18,8 @@ void	ft_buffpush(t_buff *buff, void *data, size_t size)
 	void	*hold;
 
 	hold = ft_memalloc(buff->buff_size + size);
-	ft_memcpy(hold, buff->data, buff->buff_size);
+	if (buff->data != NULL)
+		ft_memcpy(hold, buff->data, buff->buff_size);
 	ft_memcpy(hold + buff->buff_size, data, size);
 	free(buff->data);
 	buff->data = hold;
