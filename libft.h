@@ -16,6 +16,7 @@
 # define ABS(x) ((x < 0)? x * -1: x)
 
 # include <string.h>
+# include <stdlib.h>
 
 typedef	unsigned char	t_byte;
 
@@ -130,4 +131,5 @@ void					ft_buffpush(t_buff *buff, void *data, size_t size);
 int						ft_buffgetn(size_t get_size, t_buff *buff, void *data, size_t offset);
 int						ft_bufffill(t_buff *buff, int (*reader)(int, void *, size_t));
 void					*ft_realloc(void *src, size_t srclen, size_t nl);
+char					*ft_itoa_b(int num, int base);
 #endif

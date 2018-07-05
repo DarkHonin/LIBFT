@@ -18,7 +18,7 @@ OBJ_DIR:=ft_atoi.o ft_bzero.o ft_strtrim.o ft_strjoin.o ft_ischr.o \
    	ft_lstdel.o ft_lstadd.o ft_lstiter.o ft_lstmap.o ft_memccmp.o \
 	ft_buffnew.o ft_buffdel.o ft_buffget.o ft_buffstat.o ft_buffreset.o \
 	ft_buffap.o ft_buffnap.o ft_minl.o ft_buffshift.o ft_buffpush.o ft_buffgetn.o \
-	ft_bufffill.o ft_realloc.o
+	ft_bufffill.o ft_realloc.o ft_itoa_b.o
 
 NAME=libft.a
 
