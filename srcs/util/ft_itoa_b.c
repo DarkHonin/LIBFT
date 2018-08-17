@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/04 21:16:44 by wgourley          #+#    #+#             */
-/*   Updated: 2018/07/04 21:16:44 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/08/17 13:45:07 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,7 @@ static void	set_sign(char *bbuffer, int base, int *cchar)
 	}
 }
 
-
-char	*ft_itoa_b(int num, int base)
+char		*ft_itoa_b(int num, int base)
 {
 	int		str_len;
 	int		index;
