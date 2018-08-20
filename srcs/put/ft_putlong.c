@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_buffstat.c                                      :+:      :+:    :+:   */
+/*   ft_putlong.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/05 13:35:10 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/20 12:39:44 by wgourley         ###   ########.fr       */
+/*   Created: 2018/08/20 12:40:05 by wgourley          #+#    #+#             */
+/*   Updated: 2018/08/20 12:44:41 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-/*
-**  ft_buffstat returns the amount of bytes available
-**  in the buffer
-*/
-
-int	ft_buffstat(t_buff *e)
+void	ft_putlong(long e)
 {
-	return ((e->data - e->pointer) + e->available);
+	if (e >= 16)
+	{
+		ft_putlong(ABS(e / 16));
+		ft_putlong(ABS(e % 16));
+	}
+	else
+		ft_putchar_fd(ITOA_CHARS[e], 1);
 }

@@ -1,23 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_buffstat.c                                      :+:      :+:    :+:   */
+/*   std_error.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/05 13:35:10 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/20 12:39:44 by wgourley         ###   ########.fr       */
+/*   Created: 2018/08/20 10:08:34 by wgourley          #+#    #+#             */
+/*   Updated: 2018/08/20 10:11:10 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-/*
-**  ft_buffstat returns the amount of bytes available
-**  in the buffer
-*/
-
-int	ft_buffstat(t_buff *e)
+int		std_error(char *message)
 {
-	return ((e->data - e->pointer) + e->available);
+	ft_putstr("\e[91mSTDERR\e[0m :: ");
+	ft_putendl(message);
+	return (0);
+}
+
+int		warning_error(char *message)
+{
+	ft_putstr("\e[91mWARNING\e[0m :: ");
+	ft_putendl(message);
+	return (0);
 }

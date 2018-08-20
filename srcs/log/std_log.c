@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_buffstat.c                                      :+:      :+:    :+:   */
+/*   std_log.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/05 13:35:10 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/20 12:39:44 by wgourley         ###   ########.fr       */
+/*   Created: 2018/08/20 10:14:23 by wgourley          #+#    #+#             */
+/*   Updated: 2018/08/20 10:20:23 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-/*
-**  ft_buffstat returns the amount of bytes available
-**  in the buffer
-*/
-
-int	ft_buffstat(t_buff *e)
+void	log_state(char *message, void *src)
 {
-	return ((e->data - e->pointer) + e->available);
+	ft_putstr("\e[32mLOG\e[0m : ");
+	ft_putpntr(src);
+	ft_putstr(" : ");
+	ft_putendl(message);
 }

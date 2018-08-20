@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/17 13:55:18 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/08/20 12:42:19 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,12 @@ typedef struct			s_buff
 	int					meta;
 	int					available;
 }						t_buff;
+
+typedef	struct			s_stream
+{
+	int					(*reader)(int, void *, size_t);
+	t_buff				*buffer;
+}						t_stream;
 
 t_list					*ft_lstnew(const void *cont, size_t csize);
 int						ft_atoi(char const *str);
@@ -110,6 +116,8 @@ int						ft_maxi(int a, int b);
 int						ft_mini(int a, int b);
 size_t					ft_minl(size_t a, size_t b);
 void					ft_putnbr(int a);
+void					ft_putpntr(void *pntr);
+void					ft_putlong(long e);
 int						ft_count_w(const char *w, char delim);
 void					ft_putstr_fd(char *strl, int fd);
 void					ft_putendl_fd(char *str, int fd);
@@ -134,4 +142,7 @@ int						ft_bufffill(t_buff *buff,
 							int (*reader)(int, void *, size_t));
 void					*ft_realloc(void *src, size_t srclen, size_t nl);
 char					*ft_itoa_b(int num, int base);
+int						std_error(char *message);
+int						warning_error(char *message);
+void					log_state(char *message, void *src);
 #endif

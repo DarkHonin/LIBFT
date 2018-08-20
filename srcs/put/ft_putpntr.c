@@ -1,23 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_buffstat.c                                      :+:      :+:    :+:   */
+/*   ft_putpntr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/05 13:35:10 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/20 12:39:44 by wgourley         ###   ########.fr       */
+/*   Created: 2018/08/20 10:17:27 by wgourley          #+#    #+#             */
+/*   Updated: 2018/08/20 12:42:35 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <libft.h>
 
-/*
-**  ft_buffstat returns the amount of bytes available
-**  in the buffer
-*/
-
-int	ft_buffstat(t_buff *e)
+void	ft_putpntr(void *pntr)
 {
-	return ((e->data - e->pointer) + e->available);
+	unsigned long aka;
+
+	aka = (unsigned long)pntr;
+	ft_putlong(aka);
 }
