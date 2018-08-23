@@ -14,10 +14,11 @@
 
 static char *get_message_color(t_log_type t)
 {
-	static char	*strs[3] = {
+	static char	*strs[] = {
 		"32",
 		"208",
-		"196"
+		"196",
+		"33"
 	};
 	return (strs[t]);
 }

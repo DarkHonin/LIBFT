@@ -24,7 +24,8 @@ enum	e_log_type
 {
 	LOG,
 	WARNING,
-	ERROR
+	ERROR,
+	INFO
 };
 
 typedef enum e_log_type t_log_type;
