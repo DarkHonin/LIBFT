@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/20 12:42:19 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/08/23 10:46:28 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,15 @@
 # include <stdlib.h>
 
 typedef	unsigned char	t_byte;
+
+enum	e_log_type
+{
+	LOG,
+	WARNING,
+	ERROR
+};
+
+typedef enum e_log_type t_log_type;
 
 typedef struct			s_list
 {
@@ -145,4 +154,6 @@ char					*ft_itoa_b(int num, int base);
 int						std_error(char *message);
 int						warning_error(char *message);
 void					log_state(char *message, void *src);
+void					log_open(t_log_type type, char *flag, void *src);
+void					log_close(char *fn_name);
 #endif
