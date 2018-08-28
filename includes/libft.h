@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/23 10:46:28 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/08/28 15:06:10 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ enum	e_log_type
 	ERROR,
 	INFO
 };
+
+# define SHOW_LOGS 1
 
 typedef enum e_log_type t_log_type;
 
@@ -128,6 +130,7 @@ size_t					ft_minl(size_t a, size_t b);
 void					ft_putnbr(int a);
 void					ft_putpntr(void *pntr);
 void					ft_putlong(long e);
+void					ft_putfloat(float a);
 int						ft_count_w(const char *w, char delim);
 void					ft_putstr_fd(char *strl, int fd);
 void					ft_putendl_fd(char *str, int fd);

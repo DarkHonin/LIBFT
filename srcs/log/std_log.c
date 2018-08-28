@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/20 10:14:23 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/23 10:55:43 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/08/28 13:46:55 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ static char *get_message_color(t_log_type t)
 
 void	log_state(char *message, void *src)
 {
+	if (!SHOW_LOGS)
+		return ;
 	ft_putstr("\e[32mLOG\e[0m : ");
 	ft_putpntr(src);
 	ft_putstr(" : ");
