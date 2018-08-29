@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/28 15:06:10 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/08/29 20:41:06 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ enum	e_log_type
 	INFO
 };
 
-# define SHOW_LOGS 1
+# define SHOW_LOGS 0
 
 typedef enum e_log_type t_log_type;
 
@@ -157,7 +157,10 @@ void					*ft_realloc(void *src, size_t srclen, size_t nl);
 char					*ft_itoa_b(int num, int base);
 int						std_error(char *message);
 int						warning_error(char *message);
-void					log_state(char *message, void *src);
+void					log_state(t_log_type t,char *message, void *src);
 void					log_open(t_log_type type, char *flag, void *src);
 void					log_close(char *fn_name);
+int						get_message_enabled(t_log_type t);
+char					*get_message_color(t_log_type t);
+char					*get_message_text(t_log_type t);
 #endif
