@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/08/28 15:04:03 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/28 16:24:11 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/08/29 12:18:08 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,6 @@ void	ft_putfloat(float a)
 
 	ft_putnbr_fd(a, 1);
 	ft_putchar('.');
-	ft_putnbr_fd(ABS(a-((int)a)) * 100, 1);
+	rem = a-((int)a);
+	ft_putnbr_fd(ABS(a) * 100, 1);
 }
