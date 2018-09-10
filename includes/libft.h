@@ -6,7 +6,7 @@
 /*   By: wgourley <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/20 11:21:33 by wgourley          #+#    #+#             */
-/*   Updated: 2018/08/29 20:41:06 by wgourley         ###   ########.fr       */
+/*   Updated: 2018/09/05 12:41:02 by wgourley         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,6 +119,7 @@ char					*ft_strnstr(char const *b, char const *l, size_t le);
 char					*ft_strrchr(char const *hay, int needle);
 char					**ft_strsplit(const char *str, char delim);
 char					*ft_strstr(char const *big, char const *little);
+size_t					ft_charcnt(char *str, char i);
 char					*ft_strtrim(const char *e);
 int						ft_tolower(int a);
 int						ft_toupper(int a);
